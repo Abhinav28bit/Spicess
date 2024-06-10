@@ -1133,10 +1133,10 @@ body.nav-active {
 }
 
 .testimonial {
+  top: 130px;
   position: relative;
   max-width: 900px;
   width: 100%;
-  padding: 50px 0;
 }
 
 .testimonial .slides {
@@ -1151,7 +1151,7 @@ body.nav-active {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  row-gap: 30px;
+  row-gap: 10px;
 }
 
 .slide img {
@@ -1482,6 +1482,22 @@ body.nav-active {
 
   .details .name{
     font-size: 20px;
+  }
+
+  .testimonial {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+  }
+
+  .testimonial .slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 50px;
   }
 
   
@@ -1891,7 +1907,7 @@ body.nav-active {
 
   .container,
   :is(.service, .event) .container {
-    max-width: 1600px;
+    max-width: 1200px;
     width: 100%;
     margin-inline: auto;
   }
