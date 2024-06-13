@@ -13,7 +13,7 @@
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
-
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 :root {
 
     /**
@@ -222,7 +222,7 @@ body.nav-active {
 .title-3,
 .title-4 {
     color: var(--white);
-    font-family: var(--fontFamily-forum);
+    font-family: "Berkshire Swash", serif;
     font-weight: var(--weight-regular);
     line-height: var(--lineHeight-2);
 }
@@ -858,6 +858,7 @@ body.nav-active {
     margin-block: 10px 40px;
 }
 
+
 .hero .btn {
     margin-inline: auto;
 }
@@ -1034,61 +1035,150 @@ body.nav-active {
     animation: rotate360 15s linear infinite;
   }
 
+.vision-parallax{
+    background-image: url('/assets/images/vision_mission.png');
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -9999;
+}
 
+.vision-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.vision-content h1{
+    color: black;;
+    font-family: var(--fontFamily-forum);
+    font-size: 50px;
+    margin-top: 50px;
 
+}
 
+.container-vision {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 50px;
+}
+.item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
 
+.item img {
+    width: 100px;
+    height: 100px;
+    margin: 0 20px;
+}
+.content {
+    max-width: 600px;
+}
+.content h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: black;
+}
 
+  /*-----------------------------------*\
+  #SERVICE
+\*-----------------------------------*/
 
+.service .section-title {
+    margin-block-end: 16px;
+  }
+  
+  .service .section-text {
+    margin-block-end: 40px;
+  }
+  
+  .service-card {
+    overflow: hidden;
+  }
+  
+  .service-card .has-before {
+    padding-block: 30px;
+    margin-block-end: 26px;
+    z-index: 1;
+  }
+  
+  .service-card .has-before::before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 100%;
+    background-image: url('../images/img-pattern.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    transition: var(--transition-2);
+    transition-delay: 0;
+    z-index: -1;
+    will-change: transform;
+  }
+  
+  .service-card:is(:hover, :focus-within) .has-before::before {
+    transform: rotateY(0.5turn) translateX(50%);
+    transition-delay: 300ms;
+  }
+  
+  .service-card .card-banner {
+    transition: var(--transition-2);
+  }
+  
+  .service-card:is(:hover, :focus-within) .card-banner {
+    transform: scale(1.05);
+  }
+  
+  .service .card-title {
+    margin-block-end: 12px;
+  }
 
+  .certification-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .certification-content h1{
+    color: black;;
+    font-family: var(--fontFamily-forum);
+    font-size: 50px;
+    margin-top: 60px;
+  }
 
+  .certificate-img{
+    margin-top: 40px;
+  }
 
+  .container-certificate{
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+    align-items: center;
+    margin: 50px;
+  }
 
+  .certified {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.certified img {
+    width: 130px;
+    height: 100px;
+    margin: 0 20px;
+}
 
 
 
@@ -1125,75 +1215,6 @@ body.nav-active {
     opacity: 1;
     visibility: visible;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*-----------------------------------*\
@@ -1252,6 +1273,57 @@ body.nav-active {
         position: relative;
         left: 6%;
     }
+
+    .vision-parallax{
+    background-image: url(/assets/images/vision_mission.png);
+    min-height: 150vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -9999;
+    }
+
+    .vision-content h1{
+        color: black;;
+        font-family: var(--fontFamily-forum);
+        font-size: 20px;
+        margin-top: 50px;
+    
+    }
+    
+    .container-vision {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px;
+    }
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+    }
+    
+    .item img {
+        width: 100px;
+        height: 100px;
+        margin: 0 20px;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
+    }
+    .content h2 {
+        margin: 0;
+        font-size: 1.5em;
+        color: black;
+    }
+
 }
 
 /**
@@ -1288,10 +1360,6 @@ body.nav-active {
     .contact-number {
         --fontSize-body-1: 3rem;
     }
-
-
-
-
 
 
 
@@ -1332,6 +1400,9 @@ body.nav-active {
         max-width: 420px;
         margin-inline: auto;
     }
+
+
+    
 
 
 
@@ -1472,6 +1543,59 @@ body.nav-active {
     }
 
 
+    
+.vision-parallax{
+    background-image: url('/assets/images/vision_mission.png');
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -9999;
+}
+
+.vision-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vision-content h1{
+    color: black;;
+    font-family: var(--fontFamily-forum);
+    font-size: 50px;
+    margin-top: 50px;
+
+}
+
+.container-vision {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 50px;
+}
+.item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.item img {
+    width: 100px;
+    height: 100px;
+    margin: 0 20px;
+}
+.content {
+    max-width: 600px;
+}
+.content h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: black;
+}
+
     /**
      * FOOTER
      */
@@ -1481,9 +1605,6 @@ body.nav-active {
     }
 
 }
-
-
-
 
 
 /**
@@ -1517,7 +1638,7 @@ body.nav-active {
     }
 
     :is(.service, .event) .grid-list {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     :is(.service, .event) .grid-list li:last-child {
